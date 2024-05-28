@@ -9,41 +9,62 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #000; /* Черный фон */
+            color: white; /* Белый цвет текста */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-end; /* Размещаем кнопки снизу */
             align-items: center;
             height: 100vh;
-            background-color: #f5f5f5;
         }
         .container {
             width: 100%;
             max-width: 600px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
             padding: 20px;
             box-sizing: border-box;
-        }
-        h1 {
             text-align: center;
         }
-        button {
+        .buttons {
             width: 100%;
-            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 20px; /* Располагаем кнопки снизу */
+        }
+        button {
+            padding: 10px 20px;
             font-size: 16px;
-            margin-top: 10px;
             cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E90FF; /* Синий цвет кнопок */
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Telegram Web App</h1>
-        <button id="actionButton">Click me</button>
+        <p>Enjoy the new design!</p>
+    </div>
+    <div class="buttons">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+        <button id="button4">Button 4</button>
     </div>
     <script>
-        document.getElementById('actionButton').addEventListener('click', function() {
-            alert('Button clicked!');
+        document.getElementById('button1').addEventListener('click', function() {
+            alert('Button 1 clicked!');
+        });
+        document.getElementById('button2').addEventListener('click', function() {
+            alert('Button 2 clicked!');
+        });
+        document.getElementById('button3').addEventListener('click', function() {
+            alert('Button 3 clicked!');
+        });
+        document.getElementById('button4').addEventListener('click', function() {
+            alert('Button 4 clicked!');
         });
     </script>
 </body>
